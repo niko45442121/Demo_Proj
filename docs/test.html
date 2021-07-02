@@ -19,14 +19,27 @@
     <button onclick="change_text()">按我</button>
     
     <script>
+      const endpoint= 'https://data.kcg.gov.tw/dataset/'
+      const request = new XMLHttpRequest(); 
+      
+      
+      function getRequest(){
+        
+        document.getElementById('demo').innerHTML = request.responseText;     
+      }
+      
+      
       function change_text()
       
       {
-        var xhr = new XMLHttpReeuest();
-        console.log(xhr);
-        var t1 ='morderna';
-        document.getElementById('demo').innerHTML = t1;
-        console.log(t1+'這邊是console log 產生的');
+       console.log('This is log geneator');
+        
+       request.open('GET',endpoint,true);      
+       request.send(null);
+       request.addEventListener('load',getRequest);
+       console.log('request.responseText='+request.responseText);
+           
+      
       }
       
       
