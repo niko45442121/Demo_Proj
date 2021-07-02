@@ -20,6 +20,7 @@
     
     <script>
       const endpoint= 'https://data.kcg.gov.tw/dataset/a98754a3-3446-4c9a-abfc-58dc49f2158c/resource/48d4dfc4-a4b2-44a5-bdec-70f9558cd25d/download/yopendata1070622opendatajson-1070622.json'
+      const tt ='https://api.kcg.gov.tw/api/service/get/94434e0c-4a53-4e04-985d-91997e7dd716'
       const request = new XMLHttpRequest(); 
       
       
@@ -34,7 +35,7 @@
       {
        console.log('This is log geneator');
         
-       request.open('GET',endpoint,true);      
+       request.open('GET',tt,true);      
        request.send(null);
        request.addEventListener('load',getRequest);
        console.log('request.responseText='+request.responseText);
