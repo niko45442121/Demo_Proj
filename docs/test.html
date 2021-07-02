@@ -28,22 +28,20 @@
       var a1= null;
       
       
-      function getRequest(){
+      function getRequest()
+      {
         var a1= JSON.parse(request.responseText);
         document.getElementById('demo').innerHTML = a1.[44].address;     
       }
       
       
-      function change_text()
-      
-      {
-       console.log('This is log geneator');
-        
+      function change_text()      
+      {        
        request.open('GET',tt,true);      
        request.send(null);
        request.addEventListener('load',getRequest);
        document.getElementById('demo').innerHTML = a1.[44].address;     
-           
+          
       
       }
       
